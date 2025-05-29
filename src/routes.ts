@@ -1,4 +1,3 @@
-// src/routes.ts
 import { Router } from 'express';
 import { identify } from './controllers/identifyController';
 
