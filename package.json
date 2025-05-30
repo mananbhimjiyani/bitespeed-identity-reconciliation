@@ -2,10 +2,11 @@
   "name": "bitespeed-identity-reconciliation",
   "version": "1.0.0",
   "scripts": {
-    "build": "tsc && cp -r netlify/functions dist/",
+    "build": "npx prisma generate && tsc && cp -r netlify/functions dist/",
     "start": "node dist/index.js",
     "dev": "netlify dev",
-    "migrate": "npx prisma migrate deploy"
+    "migrate": "npx prisma migrate deploy",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@prisma/client": "^5.7.0",
