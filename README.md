@@ -99,6 +99,7 @@ The service uses a Contact model with the following structure:
   updatedAt: Date;       // Last update timestamp
   deletedAt?: Date;      // Soft delete timestamp
 }
+```
 
 ## Setup Instructions
 
@@ -106,26 +107,29 @@ The service uses a Contact model with the following structure:
    ```bash
    git clone <your-github-repo-url>
    cd bitespeed-identity-reconciliation
+   ```
 
 Install dependencies:
 bash
-
+```
 npm install
+```
 
 Set up environment variables in .env:
-
+env
+```
 DATABASE_URL=postgresql://postgres:[YOUR-PASSWORD]@[HOST]:5432/postgres
-
+```
 Run migrations:
 bash
-
+```
 npx prisma migrate dev
-
+```
 Start the server locally:
 bash
-
+```
 npm run dev
-
+```
 Endpoint
 POST /api/identify
 Body: { "email"?: string, "phoneNumber"?: string }
